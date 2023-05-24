@@ -1,7 +1,7 @@
 import axios from './axios.min.js';
 import qs from './qs.js';
 
-let baseUrl = '/maven-javaweb';
+let baseUrl = '';
 
 let ajax = {
   setBaseUrl: (url) => {

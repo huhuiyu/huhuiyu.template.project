@@ -25,7 +25,7 @@ public class JsonServlet extends HttpServlet {
 
   @Override
   protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-    resp.setContentType("text/json");
+    resp.setContentType("text/plain");
     BaseResult<List<Dept>> result = new BaseResult<>();
     result.setCode(200);
     result.setSuccess(true);

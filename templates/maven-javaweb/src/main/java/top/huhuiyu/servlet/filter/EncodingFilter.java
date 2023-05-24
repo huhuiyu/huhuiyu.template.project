@@ -2,6 +2,8 @@ package top.huhuiyu.servlet.filter;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebFilter(displayName = "EncodingFilter", urlPatterns = "*")
@@ -17,8 +19,16 @@ public class EncodingFilter implements Filter {
   @Override
   public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
     System.out.println(String.format("编码过滤器:%s", ENCODING_UTF_8));
-    request.setCharacterEncoding(ENCODING_UTF_8);
-    response.setCharacterEncoding(ENCODING_UTF_8);
+    HttpServletRequest req = (HttpServletRequest) request;
+    HttpServletResponse resp = (HttpServletResponse) response;
+    // 处理编码
+    req.setCharacterEncoding(ENCODING_UTF_8);
+    resp.setCharacterEncoding(ENCODING_UTF_8);
+    // 处理跨越
+    resp.setHeader("Access-Control-Allow-Origin", "*");
+//    resp.setHeader("Access-Control-Allow-Methods", "*");
+//    resp.setHeader("Access-Control-Allow-Headers", "*");
+//    resp.setHeader("Access-Control-Expose-Headers", "*");
     chain.doFilter(request, response);
   }
 
