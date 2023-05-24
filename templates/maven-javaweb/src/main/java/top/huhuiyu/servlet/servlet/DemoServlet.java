@@ -1,4 +1,4 @@
-package top.huhuiyu.servlet;
+package top.huhuiyu.servlet.servlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

@@ -27,6 +27,14 @@
     <input name="name">
     <input type="submit">
   </form>
+  <hr/>
+  <a href="json.action">json数据</a>
+  <hr/>
+
+  <pre id="divData"></pre>
+
+  <script src="./js/index.js" type="module"></script>
+
 </body>
 
 </html>
