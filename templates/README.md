@@ -2,6 +2,8 @@
 
 ## 项目目录
 
+- [gradle使用脚本生产空模板项目](/templates/gradle-project/)
+- [maven使用脚本生产空模板项目](/templates/maven-project/)
 - [java基础项目](/templates/java-project/)
 
 ## idea配置说明

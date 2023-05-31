@@ -4,10 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	<!-- 自己修改项目名称相关信息 -->
 	<groupId>top.huhuiyu.servlet</groupId>
-	<artifactId>maven-javaweb</artifactId>
+	<artifactId>javaweb</artifactId>
 	<packaging>war</packaging>
 	<version>1.0.0</version>
-	<name>maven-project</name>
+	<name>javaweb</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

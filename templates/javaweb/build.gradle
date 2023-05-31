@@ -24,8 +24,8 @@ plugins {
 }
 
 // 代码编译等级
-sourceCompatibility = 17
-targetCompatibility = 17
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 // 源码和javadoc编码设置
 [compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'
@@ -48,5 +48,9 @@ dependencies {
 	// servlet运行时环境
 	providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.1.0'
 
+	// jackson-json解析包
+	implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.15.1'
+
+	// 测试api
 	testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.9.2'
 }

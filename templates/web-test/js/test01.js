@@ -1,6 +1,6 @@
 import { ajax } from './ajax.js';
 
-ajax.setBaseUrl('http://127.0.0.1:8080/maven-javaweb');
+ajax.setBaseUrl('http://127.0.0.1:8080/javaweb');
 
 let preResult = document.getElementById('preResult');
 
