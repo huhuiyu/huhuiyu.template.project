@@ -26,9 +26,9 @@ public class EncodingFilter implements Filter {
     resp.setCharacterEncoding(ENCODING_UTF_8);
     // 处理跨越
     resp.setHeader("Access-Control-Allow-Origin", "*");
-//    resp.setHeader("Access-Control-Allow-Methods", "*");
-//    resp.setHeader("Access-Control-Allow-Headers", "*");
-//    resp.setHeader("Access-Control-Expose-Headers", "*");
+    resp.setHeader("Access-Control-Allow-Methods", "*");
+    resp.setHeader("Access-Control-Allow-Headers", "*");
+    resp.setHeader("Access-Control-Expose-Headers", "*");
     chain.doFilter(request, response);
   }
 
