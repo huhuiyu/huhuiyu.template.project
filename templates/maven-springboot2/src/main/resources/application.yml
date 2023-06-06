@@ -1,0 +1,18 @@
+server:
+  # 端口号
+  port: 10100
+  servlet:
+    # 编码设置
+    encoding:
+      charset: UTF-8
+      force: true
+spring:
+  jmx:
+    # 默认域
+    default-domain: maven_springboot2
+  jackson:
+    # 不输出null值属性
+    default-property-inclusion: non-null
+    # 日期时间信息应答为时间戳
+    serialization:
+      write-dates-as-timestamps: true
