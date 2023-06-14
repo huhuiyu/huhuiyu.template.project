@@ -1,5 +1,8 @@
 package top.huhuiyu.servlet.filter;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
@@ -9,16 +12,16 @@ import java.io.IOException;
 @WebFilter(displayName = "EncodingFilter", urlPatterns = "*")
 public class EncodingFilter implements Filter {
 
+  private static Logger logger = LoggerFactory.getLogger(EncodingFilter.class);
   private static final String ENCODING_UTF_8 = "UTF-8";
 
   @Override
   public void destroy() {
-
   }
 
   @Override
   public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-    System.out.println(String.format("编码过滤器:%s", ENCODING_UTF_8));
+    logger.debug("编码过滤器:{}", ENCODING_UTF_8);
     HttpServletRequest req = (HttpServletRequest) request;
     HttpServletResponse resp = (HttpServletResponse) response;
     // 处理编码
