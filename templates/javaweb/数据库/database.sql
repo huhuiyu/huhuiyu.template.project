@@ -1,6 +1,5 @@
 -- 创建数据库
 use information_schema;
-drop database if exists db_test;
 create database db_test default charset utf8mb4 collate utf8mb4_general_ci;
 use db_test;
 
