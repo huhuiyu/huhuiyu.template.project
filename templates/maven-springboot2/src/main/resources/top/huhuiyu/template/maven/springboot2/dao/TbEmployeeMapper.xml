@@ -23,7 +23,7 @@
 	</select>
 
 	<resultMap id="employeeDeptMap" type="TbEmployee">
-		<id property="employeeId" column="employeeId"></id>
+		<id property="employeeId" column="employee_id"></id>
 		<result property="deptId" column="dept_id"></result>
 		<result property="employeeName" column="employee_name"></result>
 		<result property="phone" column="phone"></result>
@@ -49,6 +49,11 @@
 				and e.phone like #{phone}
 			</if>
 		</where>
+	</select>
+
+	<select id="queryEmployeeByDeptId" resultType="TbEmployee">
+		select * from tb_employee
+		where dept_id = #{deptId}
 	</select>
 
 

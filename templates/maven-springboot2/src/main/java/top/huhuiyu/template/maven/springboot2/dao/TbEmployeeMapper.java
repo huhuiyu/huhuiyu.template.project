@@ -10,4 +10,7 @@ public interface TbEmployeeMapper {
   List<TbEmployee> queryAll(TbEmployee employee) throws Exception;
 
   List<TbEmployee> queryAllAssociation(TbEmployee employee) throws Exception;
+
+  List<TbEmployee> queryEmployeeByDeptId(Integer deptId) throws Exception;
+
 }
