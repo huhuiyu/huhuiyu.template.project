@@ -6,14 +6,18 @@ let txtDeptname = document.getElementById('txtDeptname');
 let btnQuery = document.getElementById('btnQuery');
 let preResult = document.getElementById('preResult');
 
-btnQuery.addEventListener('click', () => {
+btnQuery.addEventListener('click', query);
+
+function query() {
   ajax.post(
     '/dept/queryAll',
     {
       deptName: txtDeptname.value,
     },
     (data) => {
-      preResult.innerHTML=(JSON.stringify(data, null, 2));
+      preResult.innerHTML = JSON.stringify(data, null, 2);
     }
   );
-});
+}
+
+query()

@@ -12,4 +12,11 @@ public interface TbDeptMapper {
 
   List<DeptAndEmployeeList> queryDeptAndEmployeeList(TbDept dept) throws Exception;
 
+  int add(TbDept tbDept) throws Exception;
+
+  TbDept queryLast() throws Exception;
+
+  int update(TbDept tbDept) throws Exception;
+
+  int delete(TbDept tbDept) throws Exception;
 }
