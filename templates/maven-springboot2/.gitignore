@@ -8,3 +8,4 @@ build
 out
 target
 logs
+src/main/resources/application.yml

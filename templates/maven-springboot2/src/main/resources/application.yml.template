@@ -19,13 +19,16 @@ spring:
   # 数据源配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://mysql.huhuiyu.top:3306/db_test?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=GMT%2b8
-    username: test
-    password: User4-test
+    url: jdbc:mysql://数据库服务器地址:3306/数据库名称?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=GMT%2b8
+    username: 数据库用户名
+    password: 数据库密码
     hikari:
       connection-test-query: select 1
       max-lifetime: 60000
+# mybatis配置
 mybatis:
+  # 使用类型别名的包
   type-aliases-package: top.huhuiyu.template.maven.springboot2.entity
   configuration:
+    # 下划线转驼峰
     map-underscore-to-camel-case: true
