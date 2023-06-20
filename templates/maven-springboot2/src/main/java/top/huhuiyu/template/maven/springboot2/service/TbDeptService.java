@@ -7,4 +7,8 @@ import java.util.List;
 
 public interface TbDeptService {
   BaseResult<List<TbDept>> queryAll(TbDept dept) throws Exception;
+
+  BaseResult<TbDept> add(TbDept dept) throws Exception;
+
+  BaseResult<TbDept> delete(TbDept dept) throws Exception;
 }

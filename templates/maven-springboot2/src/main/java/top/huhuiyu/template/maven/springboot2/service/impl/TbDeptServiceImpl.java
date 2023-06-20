@@ -38,4 +38,27 @@ public class TbDeptServiceImpl implements TbDeptService {
     result.setCode(200);
     return result;
   }
+
+  @Override
+  public BaseResult<TbDept> add(TbDept dept) throws Exception {
+    BaseResult<TbDept> result = new BaseResult<>();
+    logger.debug("参数：{}", dept);
+    int count = tbDeptMapper.add(dept);
+    result.setSuccess(count == 1);
+    result.setData(result.isSuccess() ? dept : null);
+    result.setCode(result.isSuccess() ? 200 : 500);
+    result.setMessage(result.isSuccess() ? "添加部门成功" : "添加部门失败");
+    return result;
+  }
+
+  @Override
+  public BaseResult<TbDept> delete(TbDept dept) throws Exception {
+    BaseResult<TbDept> result = new BaseResult<>();
+    logger.debug("参数：{}", dept);
+    int count = tbDeptMapper.delete(dept);
+    result.setSuccess(count == 1);
+    result.setCode(result.isSuccess() ? 200 : 500);
+    result.setMessage(result.isSuccess() ? "删除部门成功" : "删除部门失败");
+    return result;
+  }
 }
