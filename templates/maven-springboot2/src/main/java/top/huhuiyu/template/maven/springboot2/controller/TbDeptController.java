@@ -16,7 +16,7 @@ public class TbDeptController {
     this.tbDeptService = tbDeptService;
   }
 
-  @PostMapping("/queryAll")
+  @GetMapping("/queryAll")
   public BaseResult<List<TbDept>> queryAll(TbDept dept) throws Exception {
     return tbDeptService.queryAll(dept);
   }

@@ -11,7 +11,7 @@ let preResult = document.getElementById('preResult');
 btnQuery.addEventListener('click', query);
 
 function query() {
-  ajax.post(
+  ajax.get(
     '/dept/queryAll',
     {
       deptName: txtDeptName.value,
