@@ -32,7 +32,9 @@ let ajax = {
       url: rurl,
       data: rdata,
       method: method,
-      headers: {},
+      headers: {
+        ts: new Date().getTime(),
+      },
     });
     // 请求的结果处理
     promise
@@ -60,7 +62,9 @@ let ajax = {
       url: rurl,
       data: params,
       method: method,
-      headers: {},
+      headers: {
+        ts: new Date().getTime(),
+      },
     });
     // 请求的结果处理
     promise
